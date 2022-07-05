@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <script>
+        function jump(){
+            var a = "http://localhost:63342/untitled1/denglu.html?_ijt=etavionnjebtd9tl942jetggs1&_ij_reload=RELOAD_ON_SAVE";
+            window.open(a);
+        }
+        window.addEventListener('load',function (){
+            var arrow_r = document.querySelector('.arrow_r');
+            var arrow_l = document.querySelector('.arrow_l');
+            var spe_ul = document.querySelector('.spe_ul');
+            var num = 0;
+            arrow_r.addEventListener('click', function (){
+                num++;
+                if(num == 1){
+                    spe_ul.style.left = '-800px';
+                }
+                if(num == 2 ){
+                    spe_ul.style.left = '-1600px';
+                }
+                if(num == 3 ){
+                    spe_ul.style.left = '0px';
+                    num = 0;
+                }
+                console.log(num);
+            });
+            arrow_l.addEventListener('click', function (){
+                num--;
+                if(num == -1){
+                    num = 2
+                    spe_ul.style.left = '-1600px';
+                }
+                if(num == 1 ){
+                    spe_ul.style.left = '-800px';
+                }
+                if(num == 0 ){
+                    spe_ul.style.left = '0px';
+                }
+                console.log(num);
+            });})
+    </script>
+    <style>
+
+        .header {
+            height: 170px;
+        }
+        img{
+           position:absolute;
+            top: 20px;
+            left: 150px;
+        }
+        input{
+            position:absolute;
+            top: 55px;
+            left: 500px;
+            width: 400px;
+            height: 35px;
+            border-color: #ff3434;
+        }
+        .button{
+            position:absolute;
+            background: #ff3434;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            top: 55px;
+            left: 950px;
+            width: 80px;
+            height: 41px;
+            border: none;
+        }
+        .button2{
+            position:absolute;
+            background: #ff3434;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            top: 55px;
+            left: 1150px;
+            width: 100px;
+            height: 41px;
+            border-color: #ff3434;
+        }
+        .button2:hover{
+            background: white;
+            color: #ff3434;
+            transition-duration: 1ms;
+        }
+        .button3{
+            position:absolute;
+            background: white;
+            font-weight: bold;
+            font-size: 20px;
+            color: darkgray;
+            top: 55px;
+            left: 1250px;
+            width: 100px;
+            height: 41px;
+            border-color: darkgray;
+        }
+        .button5{
+            position:absolute;
+            background: #ff3434;
+            font-weight: bolder;
+            font-size: 20px;
+            color: white;
+            top: 142px;
+            left: 150px;
+            width: 200px;
+            height: 43px;
+            border: none;
+        }
+        .header a{
+            position:absolute;
+            color: darkgrey;
+            top: 105px;
+            left: 520px;
+            font-size: 10px;
+            text-decoration: none;
+        }
+        .article{
+            position: absolute;
+            top: 190px;
+            left:350px;
+            width: 800px;
+            height: 600px;
+        }
+        .nav1{
+            height: 3px;
+        }
+        .section{
+            height:700px;
+        }
+        .aside{
+            width: 350px;
+            height: 450px;
+
+        }
+        .aside2{
+           position: absolute;
+            top:190px;
+            left:1150px;
+            width: 350px;
+            height: 450px;
+            border-color: #ff3434;
+        }
+        .roll_img {
+            position: absolute;
+            height: 400px;
+            width: 800px;
+            background-color: #646464;
+            overflow: hidden;
+        }
+        .roll_img .spe_ul {
+            position: absolute;
+            left: 0px;
+            width: 400%;
+        }
+        .roll_img ul li {
+            float: left;
+        }
+        .roll_img ul li img{
+            display: block;
+            height: 400px;
+            width: 800px;
+            border: 0;
+            vertical-align: middle;
+        }
+        .arrow_l,
+        .arrow_r{
+            position: absolute;
+            margin-top: -20px;
+            top: 50%;
+            width: 25px;
+            height: 40px;
+            font-family: 'icomoon';
+            font-size: 18px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, .3);
+            text-decoration: none;
+        }
+        .arrow_r {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <select style="position: absolute; top: 142px;
+            left: 150px;
+            width: 200px;
+            height: 43px;
+            background: #ff3434;color: white; font-weight: bolder;
+            font-size: 20px;border: none">
+        <option value="volvo">全部商品分类</option>
+        <option value="saab">图书</option>
+        <option value="opel">玩具</option>
+        <option value="audi">生活</option>
+    </select>
+    <div class="logo"><img src="http://img61.ddimg.cn/upload_img/00405/luyi/DDlogoNEW.gif" usemap="#logo_link"></div>
+    <input type="text">
+    <button class="button">搜索</button>
+    <button class="button2">购物车</button>
+    <button class="button3" onclick=javascrtpt:location.href="http://localhost:63342/untitled1/denglu.html?_ijt=etavionnjebtd9tl942jetggs1&_ij_reload=RELOAD_ON_SAVE" >登录</button>
+    <a href="#">热搜: 生活 大象的旅程 认知税 今日抢购 森马 </a>
+    <button class="button6.1" style="position: absolute;top: 142px;
+            left: 350px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">图书</button>
+    <button class="button6.2" style="position: absolute;top: 142px;
+            left: 430px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">电子书</button>
+    <button class="button6.3" style="position: absolute;top: 142px;
+            left: 510px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">网络文学</button>
+    <button class="button6.4" style="position: absolute;top: 142px;
+            left: 590px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">户外运动</button>
+    <button class="button6.5" style="position: absolute;top: 142px;
+            left: 670px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">乐高玩具</button>
+    <button class="button6.6" style="position: absolute;top: 142px;
+            left: 750px;
+            width: 80px;
+            height: 43px;
+            border: none;font-weight: bold">美妆</button>
+</div>
+<div class="nav1">
+    <hr class="hr" size="3px" color=" #ff3434"/>
+</div>
+<div class="section">
+    <div class="aside">
+       <button class="buttonaside" style="position:absolute;top:193px;left:150px;width: 200px;height: 40px;border: none">图书、童书</button>
+        <button class="buttonaside1" style="position:absolute;top:233px;left:150px;width: 200px;height: 40px;border: none">电子书，网络文学</button>
+        <button class="buttonaside2" style="position:absolute;top:273px;left:150px;width: 200px;height: 40px;border: none">创意文具</button>
+        <button class="buttonaside3" style="position:absolute;top:313px;left:150px;width: 200px;height: 40px;border: none">服饰、内衣</button>
+        <button class="buttonaside4" style="position:absolute;top:353px;left:150px;width: 200px;height: 40px;border: none">鞋靴、鞋包</button>
+        <button class="buttonaside5" style="position:absolute;top:393px;left:150px;width: 200px;height: 40px;border: none">运动户外</button>
+        <button class="buttonaside6" style="position:absolute;top:433px;left:150px;width: 200px;height: 40px;border: none">孕、婴、童</button>
+        <button class="buttonaside7" style="position:absolute;top:473px;left:150px;width: 200px;height: 40px;border: none">家具、家纺、汽车</button>
+        <button class="buttonaside8" style="position:absolute;top:513px;left:150px;width: 200px;height: 40px;border: none">家具、家装、康体</button>
+        <button class="buttonaside9" style="position:absolute;top:553px;left:150px;width: 200px;height: 40px;border: none">美妆、个人护理、清洁</button>
+        <button class="buttonaside10" style="position:absolute;top:593px;left:150px;width: 200px;height: 40px;border: none">食品、茶酒</button>
+    </div>
+    <div class="article">
+            <div class="roll_img">
+
+                <ul class="spe_ul">
+                    <li>
+                        <img src="http://img61.ddimg.cn/2021/10/14/2021101418051743994.jpg"style="position:absolute;top: -15px;left:0px;height: 400px;width: 800px">
+                    </li>
+                    <li>
+                        <img src="http://img61.ddimg.cn/2021/10/13/2021101311243998986.jpg"style="position:absolute;top: -15px;left:800px;height: 400px;width: 800px">
+                    </li>
+                    <li>
+                        <img src="http://img62.ddimg.cn/2021/10/14/2021101414112036681.jpg"style="position:absolute;top: -15px;left:1600px;height: 400px;width: 800px">
+                    </li>
+                </ul>
+                <a href="#" class="arrow_l"><</a>
+                <a href="#" class="arrow_r">></a>
+            </div>
+         <a href="http://localhost:63342/untitled1/tushu.html?_ijt=vb16rldc4lj7upgko48ato8oan&_ij_reload=RELOAD_ON_SAVE" ><img src="http://img3m6.ddimg.cn/7/8/29282326-1_l_19.jpg"style="position: absolute;top: 400px;left: 0px;width: 200px;height: 200px"/></a>
+        <img src="http://img3m2.ddimg.cn/81/10/29304972-1_l_231.jpg" style="position: absolute;top:400px;left:200px;width: 200px;height: 200px"/>
+        <img src="http://img3m9.ddimg.cn/32/20/29252849-1_l_9.jpg" style="position: absolute;top:400px;left:400px;width: 200px;height: 200px"/>
+        <img src="http://img3m0.ddimg.cn/51/2/29267520-1_l_29.jpg" style="position: absolute;top:400px;left:600px;width: 200px;height: 200px"/>
+        <hr class="hr" size="3px" color=" #ff3434"/>
+    </div>
+    <div class="aside2">
+       <img src="http://img54.ddimg.cn/85250180988364_y.jpg" style="position: absolute;top:0px;left:0px"/>
+       <p style="position: absolute;top:200px;left: 20px;font-weight: bold">图书畅销榜</p>
+        <p style="position: absolute;top:240px;left: 20px">1.大象的旅程</p>
+        <p style="position: absolute;top:280px;left: 20px">2.活着</p>
+        <p style="position: absolute;top:320px;left: 20px">3.少年读史记</p>
+        <p style="position: absolute;top:360px;left: 20px">4.人间失格</p>
+        <p style="position: absolute;top:400px;left: 20px">5.中国民间故事</p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
