@@ -34,7 +34,7 @@
                                     class="form-control form-control-round" placeholder="输入密码"><label
                                     class="form-label fw-600 mb-0 mt-2 text-end"><a href="#">忘记密码
                                         </a></label></div>
-                            <div class="col-12 mb-6"><a class="btn btn-primary btn-round w-100" href="index.html" onclick="this">登录</a>
+                            <div class="col-12 mb-6"><button class="btn btn-primary btn-round w-100" onclick="ajaxForm()">登录</button>
                             </div>
                             <div class="col-12 mb-6"><a class="btn btn-primary btn-round w-100" href="register.html" onclick="this">注册</a>
                             </div>
@@ -56,6 +56,32 @@
     <script src="assets/js/simplebar.min.js"></script><!-- Plugins & Activation JS For Only This Page -->
     <!--Main JS(Common Activation Codes)-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function ajaxForm(){
+            var id =document.getElementById("username").value;
+            var pw =document.getElementById("password").value;
+            $.ajax({
+                url:"http://127.0.0.1:5001/mLogin",
+                type:"GET",
+                data:{
+                    'id':id,
+                    'pw':pw
+                },
+                success:function (data1){
+                    result=data1.result
+                    if(result=='1')
+                        alert(result)
+                    else
+                        sID=data1.name;
+                        location.href="MonitoringOptionsTabs.html?username="+sID
+                },
+                error:function (e){
+                    alert('error')
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
