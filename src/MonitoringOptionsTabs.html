@@ -348,6 +348,14 @@
     <script src="assets/js/simplebar.min.js"></script>
     <!--Main JS(Common Activation Codes)-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function load(){
+            var searchParams = new URLSearchParams(location.search);
+            var username=searchParams.get('username');
+            alert(username)
+        }
+    </script>
 </body>
 
 </html>
