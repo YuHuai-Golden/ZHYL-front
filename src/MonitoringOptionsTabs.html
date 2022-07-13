@@ -15,347 +15,179 @@
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <!-- Header Section Start -->
-        <div class="header-section">
-            <div class="container-fluid">
-                <div class="row justify-content-between align-items-center">
-                    <!-- Header Logo(Header Left) Start -->
-                    <div class="header-logo col-auto d-none d-sm-flex"><a href="index.html"><span class="logo-icon"><img
-                                    src="assets/img/logo-icon.png" alt="Logo Icon"><img
-                                    src="assets/img/logo-icon-light.png" class="light" alt="Logo Icon"></span><span
-                                class="logo-default"><img src="assets/img/logo-default.png" alt="Logo Default"><img
-                                    src="assets/img/logo-default-light.png" class="light" alt="Logo Default"></span></a>
-                    </div><!-- Header Logo(Header Left) End -->
-                    <!-- Header Right Start -->
-                    <div class="header-right flex-grow-1 col-auto">
-                        <div class="row justify-content-between align-items-center">
-                            <!-- SideNav Toggle & Search Start -->
-                            <div class="d-flex col-auto">
-                                <!-- SideNav Toggle Start --><button class="sidenav-toggle d-lg-none"><i
-                                        data-feather="menu"></i></button><!-- SideNav Toggle End -->
-                                <!-- Search Start -->
-                                <div class="header-search"><button class="header-search-toggle d-flex d-md-none"><i
-                                            data-feather="search"></i></button>
-                                    <div class="header-search-form">
-                                        <form action="#"><input type="text" placeholder="Search Something..."><button
-                                                class="search-submit"><i data-feather="search"></i></button></form>
-                                    </div>
-                                </div><!-- Search End -->
-                            </div><!-- SideNav Toggle & Search End -->
-                            <!-- Header Actions(Header Right) Start -->
-                            <div class="col-auto">
-                                <ul class="header-right-action nav">
-                                    <!-- Notification Start -->
-                                    <li class="nav-item dropdown notification"><a class="nav-link" href="#"
-                                            data-bs-toggle="dropdown"><span class="icon"><i
-                                                    data-feather="bell"></i></span><span
-                                                class="badge badge-dot badge-success">badge</span></a>
-                                        <div class="dropdown-menu dropdown-menu-right"><a href="javascript:void(0);"
-                                                class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small primary"><i data-feather="user"></i>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">New User Register</h5>
-                                                        <p class="media-text">5 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </a><a href="javascript:void(0);" class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small"><img src="assets/img/thumb-2.jpg"
-                                                            alt=""></div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title"><span>James</span>send you a message
-                                                        </h5>
-                                                        <p class="media-text">15 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </a><a href="javascript:void(0);" class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small danger"><i data-feather="frown"></i>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">Product shipping cancel</h5>
-                                                        <p class="media-text">2 hours ago</p>
-                                                    </div>
-                                                </div>
-                                            </a><a href="javascript:void(0);" class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small success"><i data-feather="gift"></i>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">New Order received</h5>
-                                                        <p class="media-text">2 hours ago</p>
-                                                    </div>
-                                                </div>
-                                            </a><a href="javascript:void(0);" class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small warning"><i
-                                                            data-feather="alert-triangle"></i></div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">Server Limit Reached!</h5>
-                                                        <p class="media-text">2 hours ago</p>
-                                                    </div>
-                                                </div>
-                                            </a></div>
-                                    </li><!-- Notification End -->
-                                    <!-- Message Start -->
-                                    <li class="nav-item dropdown message"><a class="nav-link" href="#"
-                                            data-bs-toggle="dropdown"><span class="icon"><i
-                                                    data-feather="message-square"></i></span><span
-                                                class="badge badge-dot badge-success">badge</span></a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <div class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small"><img src="assets/img/thumb-1.jpg"
-                                                            alt=""></div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">Tyler <span class="small">10 min
-                                                                ago</span></h5>
-                                                        <p class="media-text">Product inquiry</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small"><img src="assets/img/thumb-2.jpg"
-                                                            alt=""></div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">James <span class="small">1 hours
-                                                                ago</span></h5>
-                                                        <p class="media-text">Hi buddy,are you coming to the reunion</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item py-2">
-                                                <div class="media">
-                                                    <div class="media-thumb small"><img src="assets/img/thumb-3.jpg"
-                                                            alt=""></div>
-                                                    <div class="media-body">
-                                                        <h5 class="media-title">Louis <span class="small">1 hours
-                                                                ago</span></h5>
-                                                        <p class="media-text">Client meeting</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li><!-- Message End -->
-                                    <!-- User Start -->
-                                    <li class="nav-item dropdown user"><a class="nav-link" href="#"
-                                            data-bs-toggle="dropdown"><span class="name">Mr. Doe</span><span
-                                                class="thumbnail"><img src="assets/img/thumb-small.jpg"
-                                                    alt="User Thumbnail Image"></span></a>
-                                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
-                                                href="#"><i data-feather="user"></i>Profile</a><a class="dropdown-item"
-                                                href="#"><i data-feather="mail"></i>Inbox</a><a class="dropdown-item"
-                                                href="#"><i data-feather="lock"></i>Lock Screen</a><a
-                                                class="dropdown-item" href="#"><i data-feather="log-out"></i>Sign
-                                                Out</a></div>
-                                    </li><!-- User End -->
-                                </ul>
-                            </div><!-- Header Actions(Header Right) End -->
-                        </div>
-                    </div><!-- Header Right End -->
-                </div>
+<div class="main-wrapper">
+    <!-- Header Section Start -->
+    <div class="header-section">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <!-- Header Logo(Header Left) Start -->
+                <div class="header-logo col-auto d-none d-sm-flex"><a href="index.html"><span class="logo-icon"><img
+                        src="assets/img/logo-icon.png" alt="Logo Icon"><img
+                        src="assets/img/logo-icon-light.png" class="light" alt="Logo Icon"></span><span
+                        class="logo-default"><img src="assets/img/logo.png" alt="Logo Default"><img
+                        src="assets/img/logo-default-light.png" class="light" alt="Logo Default"></span></a>
+                </div><!-- Header Logo(Header Left) End -->
             </div>
-        </div><!-- Header Section End -->
-        <!-- SideNav Section Start -->
-        <div class="sidenav-section" data-simplebar="">
-            <!-- SideNav Inner Start -->
-            <div class="sidenav-inner">
-                <nav class="sidenav-menu" id="sidenav-menu">
-                    <ul>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="home" class="nav-icon"></i>Dashboards<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">eCommerce</a></li>
-                                <li><a href="index-currency.html">Currency</a></li>
-                                <li><a href="index-covid-19.html">COVID-19</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="gift" class="nav-icon"></i>Apps<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="mail.html">Mail</a></li>
-                                <li><a href="task.html">Task</a></li>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li><a href="fullcalendar.html">Fullcalendar</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="shopping-cart"
-                                    class="nav-icon"></i>eCommerce<span class="arrow"><i
-                                        class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="products-list.html">Products List</a></li>
-                                <li><a href="add-product.html">Add Product</a></li>
-                                <li><a href="order-list.html">Order List</a></li>
-                                <li><a href="invoice-list.html">Invoice List</a></li>
-                                <li><a href="invoice-details.html">Invoice Details</a></li>
-                                <li><a href="contact-list.html">Contact List</a></li>
-                                <li><a href="shopping-cart.html">Cart</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="user"
-                                    class="nav-icon"></i>Authentication<span class="arrow"><i
-                                        class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="lock-screen.html">Lock Screen</a></li>
-                                <li><a href="404.html">404 Error</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="box" class="nav-icon"></i>Basic
-                                Elements<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="elements-alerts.html">Alerts</a></li>
-                                <li><a href="elements-accordions.html">Accordions</a></li>
-                                <li><a href="elements-avatar.html">Avatar</a></li>
-                                <li><a href="elements-badge.html">Badge</a></li>
-                                <li><a href="elements-buttons.html">Buttons</a></li>
-                                <li><a href="elements-carousel.html">Carousel</a></li>
-                                <li><a href="elements-dropdown.html">Dropdown</a></li>
-                                <li><a href="elements-list-group.html">List Group</a></li>
-                                <li><a href="elements-modal.html">Modal</a></li>
-                                <li><a href="elements-pagination.html">Pagination</a></li>
-                                <li><a href="elements-progress.html">Progress Bar</a></li>
-                                <li><a href="elements-spinners.html">Spinners</a></li>
-                                <li><a href="">Tabs</a></li>
-                                <li><a href="elements-tooltip.html">Tooltip</a></li>
-                                <li><a href="elements-popovers.html">Popovers</a></li>
-                                <li><a href="elements-typography.html">Typography</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="server" class="nav-icon"></i>Advance
-                                Elements<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="elements-clipboard.html">clipboard</a></li>
-                                <li><a href="elements-media-player.html">Media Player</a></li>
-                                <li><a href="elements-sortable.html">Sortable</a></li>
-                                <li><a href="elements-toastr.html">Toastr</a></li>
-                                <li><a href="elements-rating.html">Rating</a></li>
-                                <li><a href="elements-sweetalert.html">Sweetalert</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="disc" class="nav-icon"></i>Forms<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="form-basic.html">Basic Form</a></li>
-                                <li><a href="form-advance.html">Advance Form</a></li>
-                                <li><a href="form-editors.html">Editors</a></li>
-                                <li><a href="form-wizard.html">Wizard</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="columns" class="nav-icon"></i>Tables<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="table-basic.html">Basic Table</a></li>
-                                <li><a href="data-table.html">Data Table</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="bar-chart-2"
-                                    class="nav-icon"></i>Charts<span class="arrow"><i
-                                        class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="chart-apexchart.html"><span>Apexchart</span></a></li>
-                                <li><a href="chart-chartjs.html"><span>ChartJs</span></a></li>
-                                <li><a href="chart-morris.html"><span>Morris Chart</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="grid" class="nav-icon"></i>Icons<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="icons-cryptocurrency.html">Cryptocurrency</a></li>
-                                <li><a href="icons-fontawesome.html">Font Awesome</a></li>
-                                <li><a href="icons-feather.html">Feather</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub-menu"><a href="#"><i data-feather="map" class="nav-icon"></i>Maps<span
-                                    class="arrow"><i class="fa fa-angle-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="map-google.html"><span>Google Map</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div><!-- SideNav Inner End -->
-        </div><!-- SideNav Section End -->
-        <!-- Content Body Start -->
-        <div class="content-body">
-            <!-- Page Headings Start -->
-            <div class="row justify-content-between align-items-center mb-4">
-                <!-- Page Heading Start -->
-                <div class="col-md-auto col-12 mb-2">
-                    <h3 class="mb-0">Tabs</h3>
-                </div><!-- Page Heading End -->
-                <!-- Page Button Group Start -->
-<!--                <div class="col-md-auto col-12 mb-2"><span>Date:17.06.2021 6.17am</span></div>-->
-                <!-- Page Button Group End -->
-            </div><!-- Page Headings End -->
-            <div class="row mb-n6">
+        </div>
+    </div><!-- Header Section End -->
+    <!-- SideNav Section Start -->
+    <div class="sidenav-section" data-simplebar="">
+        <!-- SideNav Inner Start -->
+        <div class="sidenav-inner">
+            <nav class="sidenav-menu" id="sidenav-menu">
+                <ul>
+                    <li class="has-sub-menu"><a href="#"><i class="nav-icon"></i>
+                        Monitor<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                        <ul class="sub-menu">
+                            <li><a href=" ">MonitorOptionsTabs</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub-menu"><a href="#"><i data-feather=""
+                                                            class="nav-icon"></i>Manage System<span class="arrow"><i
+                            class="fa fa-angle-down"></i></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="worker-list.html">Worker List</a></li>
+                            <li><a href="oldman-list1.html">OldMan List1</a></li>
+                            <li><a href="oldman-list2.html">OldMan List2</a></li>
+                            <li><a href="event-list.html">Event List</a></li>
+                            <li><a href="custodian-list.html">Custodian List</a></li>
+                            <li><a href="admins-list.html">Admins List</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- SideNav Inner End -->
+    </div><!-- SideNav Section End -->
+    <!-- Content Body Start -->
+    <div class="content-body">
+        <!-- Page Headings Start -->
+        <div class="row justify-content-between align-items-center mb-4">
+            <!-- Page Heading Start -->
+            <div class="col-md-auto col-12 mb-2">
+                <h3 class="mb-0">Tabs</h3>
+            </div><!-- Page Heading End -->
+            <!-- Page Button Group Start -->
+            <!--                <div class="col-md-auto col-12 mb-2"><span>Date:17.06.2021 6.17am</span></div>-->
+            <!-- Page Button Group End -->
+        </div><!-- Page Headings End -->
+        <div class="row mb-n6">
 
-                <!--Tab With Icon Start-->
-                <div class="col-xl-12 col-12 mb-6">
-                    <div class="card">
-                        <div class="card-head border-bottom">
-                            <h4 class="title">Tab With Icon</h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="nav nav-tabs mb-3">
-                                <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#choose1"><i
-                                            class="fa fa-home me-1"></i>One</a></li>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#choose2"><i
-                                            class="fa fa-user me-1"></i>Two</a></li>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#choose3"><i
-                                            class="fa fa-envelope me-1"></i>Three</a></li>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#choose4"><i
-                                        class="fa fa-envelope me-1"></i>Four</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="choose1">
-                                    <p><img src="assets/image/pic1.png" height="523.25" width="703.5"/></p>
-                                </div>
-                                <div class="tab-pane fade" id="choose2">
-                                    <p>choose2</p>
-                                </div>
-                                <div class="tab-pane fade" id="choose3">
-                                    <p>choose3</p>
-                                </div>
-                                <div class="tab-pane fade" id="choose4">
-                                    <p>choose4</p>
-                                </div>
+            <!--Tab With Icon Start-->
+            <div class="col-xl-12 col-12 mb-6">
+                <div class="card">
+                    <div class="card-head border-bottom">
+                        <h4 class="title">Tab With Icon</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs mb-3">
+                            <li class="nav-item" onclick="changeState1()"><a class="nav-link active" data-bs-toggle="tab" href="#choose1"><i
+                                    class="fa fa-home me-1" onclick="changeState1()"></i>One</a></li>
+                            <li class="nav-item" onclick="changeState2()"><a class="nav-link" data-bs-toggle="tab" href="#choose2"><i
+                                    class="fa fa-user me-1" onclick="changeState2()"></i>Two</a></li>
+                            <li class="nav-item"onclick="changeState3()"><a class="nav-link" data-bs-toggle="tab" href="#choose3"><i
+                                    class="fa fa-envelope me-1" onclick="changeState3()"></i>Three</a></li>
+                            <li class="nav-item"onclick="changeState4()"><a class="nav-link" data-bs-toggle="tab" href="#choose4"><i
+                                    class="fa fa-envelope me-1" onclick="changeState4()"></i>Four</a></li>
+                            <li class="nav-item"onclick="changeState5()"><a class="nav-link" data-bs-toggle="tab" href="#choose4"><i
+                                    class="fa fa-envelope me-1" onclick="changeState5()"></i>Transform</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="choose1">
+                                <p><img id="001" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000" /></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose2">
+                                <p><img id="002" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000"/></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose3">
+                                <p><img id="003" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000" /></p>
+                            </div>
+                            <div class="tab-pane fade" id="choose4">
+                                <p><img id="004" src="http://127.0.0.1:5001/video_viewer2" height="523.25" width="1000"/></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--Tab With Icon End-->
             </div>
-        </div><!-- Content Body End -->
-        <!-- Footer Section Start -->
-        <div class="footer-section bg-white py-4 mt-auto">
-<!--            <div class="container-fluid">-->
-<!--                <div class="footer-copyright text-center">-->
-<!--                    <p class="text-muted">2021 &copy;By <a href="/">bootstrapmb</a></p>-->
-<!--                </div>-->
-            </div>
-        </div><!-- Footer Section End -->
-    </div><!-- JS Files ============================================ -->
-    <!-- Global Vendor,plugins JS -->
-    <!-- Vendor JS -->
-    <script src="assets/js/vendor.min.js"></script>
-    <!--Plugins JS-->
-    <script src="assets/js/simplebar.min.js"></script>
-    <!--Main JS(Common Activation Codes)-->
-    <script src="assets/js/main.js"></script>
+            <!--Tab With Icon End-->
+        </div>
+    </div><!-- Content Body End -->
+    <!-- Footer Section Start -->
+    <div class="footer-section bg-white py-4 mt-auto">
+        <!--            <div class="container-fluid">-->
+        <!--                <div class="footer-copyright text-center">-->
+        <!--                    <p class="text-muted">2021 &copy;By <a href="/">bootstrapmb</a></p>-->
+        <!--                </div>-->
+    </div>
+</div><!-- Footer Section End -->
+</div><!-- JS Files ============================================ -->
+<!-- Global Vendor,plugins JS -->
+<!-- Vendor JS -->
+<script src="assets/js/vendor.min.js"></script>
+<!--Plugins JS-->
+<script src="assets/js/simplebar.min.js"></script>
+<!--Main JS(Common Activation Codes)-->
+<script src="assets/js/main.js"></script>
 
-    <script>
-        function load(){
-            var searchParams = new URLSearchParams(location.search);
-            var username=searchParams.get('username');
-            alert(username)
+
+
+
+<script>
+    function load(){
+        var searchParams = new URLSearchParams(location.search);
+        var username=searchParams.get('username');
+        alert(username)
+    }
+    function changeState1(){
+        var request="1"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state1',
+            type:'GET',
+            data:{id:request},
+        })
+    }function changeState2(){
+        var request="2"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state2',
+            type:'GET',
+            data:{id:request},
+        })
+    }function changeState3(){
+        var request="3"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state3',
+            type:'GET',
+            data:{id:request},
+        })
+    }
+    function changeState4(){
+        var request="4"
+        $.ajax({
+            url:' http://127.0.0.1:5001/state4',
+            type:'GET',
+            data:{id:request},
+        })
+    }
+    var judge = 1;
+    var link = "http://127.0.0.1:5001/video_viewer"
+    var link2 = "http://127.0.0.1:5001/video_viewer2"
+
+    function changeState5(){
+        var link = "http://127.0.0.1:5001/video_viewer"
+        if(judge == 1){
+            judge = 2
+            document.getElementById("001").setAttribute("src",link)
+            document.getElementById("002").setAttribute("src",link)
+            document.getElementById("003").setAttribute("src",link)
+            document.getElementById("004").setAttribute("src",link)
+        }else{
+            judge = 1
+            document.getElementById("001").setAttribute("src",link2)
+            document.getElementById("002").setAttribute("src",link2)
+            document.getElementById("003").setAttribute("src",link2)
+            document.getElementById("004").setAttribute("src",link2)
         }
-    </script>
+    }
+</script>
 </body>
 
 </html>
