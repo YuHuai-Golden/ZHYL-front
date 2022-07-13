@@ -72,9 +72,11 @@
                 result=data1.result
                 if(result=='1')
                     alert(result)
-                else
+                else{
                     sID=data1.name;
-                location.href="MonitoringOptionsTabs.html?username="+sID
+                    location.href="MonitoringOptionsTabs.html?username="+sID
+                }
+
             },
             error:function (e){
                 alert('error')
