@@ -52,6 +52,18 @@
                             <!-- Header Actions(Header Right) Start -->
                             <div class="col-auto">
                                 <ul class="header-right-action nav">
+                                    <!-- User Start -->
+                                    <li class="nav-item dropdown user"><a class="nav-link" href="#"
+                                                                          data-bs-toggle="dropdown"><span id="adname" class="name"></span><span
+                                            class="thumbnail"><img src="assets/img/thumb-small.jpg"
+                                                                   alt="User Thumbnail Image"></span></a>
+                                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
+                                                                                          href="#"><i data-feather="user"></i>Profile</a><a class="dropdown-item"
+                                                                                                                                            href="#"><i data-feather="mail"></i>Inbox</a><a class="dropdown-item"
+                                                                                                                                                                                            href="#"><i data-feather="lock"></i>Lock Screen</a><a
+                                                class="dropdown-item" href="#"><i data-feather="log-out"></i>Sign
+                                            Out</a></div>
+                                    </li><!-- User End -->
                                     <!-- Notification Start -->
                                     <!-- Notification End -->
                                 </ul>
@@ -67,16 +79,22 @@
             <div class="sidenav-inner">
                 <nav class="sidenav-menu" id="sidenav-menu">
                     <ul>
+                        <li class="has-sub-menu"><a href="#"><i class="nav-icon"></i>
+                            Monitor<span class="arrow"><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="javascript:jump('MonitoringOptionsTabs.html')">MonitorOptionsTabs</a></li>
+                            </ul>
+                        </li>
                         <li class="has-sub-menu"><a href="#"><i data-feather=""
                                     class="nav-icon"></i>Manage System<span class="arrow"><i
                                         class="fa fa-angle-down"></i></span></a>
                             <ul class="sub-menu">
                                 <li><a href="javascript:showdata()">Worker List</a></li>
-                                <li><a href="oldman-list1.html">OldMan List1</a></li>
-                                <li><a href="oldman-list2.html">OldMan List2</a></li>
-                                <li><a href="event-list.html">Event List</a></li>
-                                <li><a href="custodian-list.html">Custodian List</a></li>
-                                <li><a href="admins-list.html">Admins List</a></li>
+                                <li><a href="javascript:jump('oldman-list1.html')">OldMan List1</a></li>
+                                <li><a href="javascript:jump('oldman-list2.html')">OldMan List2</a></li>
+<!--                                <li><a href="javascript:jump('event-list.html')">Event List</a></li>-->
+                                <li><a href="javascript:jump('custodian-list.html')">Custodian List</a></li>
+                                <li><a href="javascript:jump('admins-list.html')">Admins List</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -327,20 +345,20 @@
                 document.getElementById("Valid"+a).contentEditable='false'
                 if(state==1){
                     $.ajax({
-                        url:' http://127.0.0.1:5000//',
+                        url:' http://127.0.0.1:5001//updateWorker',
                         type:'GET',
                         data:{reeditwork:request,
                             ID:document.getElementById("ID"+a).innerText,
-                            name:document.getElementById("name"+a).innerText,
-                            gender:document.getElementById("gender"+a).innerText,
+                            // name:document.getElementById("name"+a).innerText,
+                            // gender:document.getElementById("gender"+a).innerText,
                             tel:document.getElementById("tel"+a).innerText,
                             type:document.getElementById("type"+a).innerText,
-                            Valid:document.getElementById("Valid"+a).innerText},
+                            valid:document.getElementById("Valid"+a).innerText},
                     })
                     alert('edit success')
                 }else {
                     $.ajax({
-                        url:' http://127.0.0.1:5000//',
+                        url:' http://127.0.0.1:5001//insertWorker',
                         type:'GET',
                         data:{readdwork:request2,
                             ID:document.getElementById("ID"+a).innerText,
@@ -348,7 +366,7 @@
                             gender:document.getElementById("gender"+a).innerText,
                             tel:document.getElementById("tel"+a).innerText,
                             type:document.getElementById("type"+a).innerText,
-                            Valid:document.getElementById("Valid"+a).innerText},
+                            valid:document.getElementById("Valid"+a).innerText},
                     })
                     alert('add success')
                 }
@@ -359,10 +377,10 @@
                     state = 2
                     document.getElementById("ID"+a).innerText ='example:132'
                     document.getElementById("name"+a).innerText ='example:cuisicong'
-                    document.getElementById("gender"+a).innerText ='M/F'
+                    document.getElementById("gender"+a).innerText ='m/f'
                     document.getElementById("tel"+a).innerText ='example:131256847752'
                     document.getElementById("type"+a).innerText ='v/e'
-                    document.getElementById("Valid"+a).innerText ='T/F'
+                    document.getElementById("Valid"+a).innerText ='0/1'
                     document.getElementById("ID"+a).contentEditable='true'
                     document.getElementById("name"+a).contentEditable='true'
                     document.getElementById("gender"+a).contentEditable='true'
@@ -384,7 +402,7 @@
         function deleteinfo(a){
             var request="deworker"
             $.ajax({
-                url:' http://127.0.0.1:5000//',
+                url:' http://127.0.0.1:5001//deleteWorker',
                 type:'GET',
                 data:{redeworker:request,
                     ID:document.getElementById("ID"+a).innerText}
@@ -402,40 +420,31 @@
         }
     </script>
     <script>
+        var searchParams = new URLSearchParams(location.search);
+        var username = searchParams.get('username');
         window.onload = function(){
-            var request="workerinfo"
-            $.ajax({
-                url:' http://127.0.0.1:5000//',
-                type:'GET',
-                data:{reshowworker:request},
-
-                success:function(result){
-                    for(var number=1;number<result['num']+1;number++){
-                        document.getElementById("ID"+number).innerText =result['ID'+number]
-                        document.getElementById("name"+number).innerText =result['name'+number]
-                        document.getElementById("gender"+number).innerText =result['gender'+number]
-                        document.getElementById("tel"+number).innerText =result['tel'+number]
-                        document.getElementById("type"+number).innerText =result['type'+number]
-                        document.getElementById("Valid"+number).innerText =result['Valid'+number]
-                    }
-                }
-            })
+            showdata()
+            document.getElementById("adname").innerText = username;
+        }
+        function jump(a){
+            location.href = a + '?' + 'username='+username ;
         }
         function showdata(){
             var request="workerinfo"
             $.ajax({
-                url:' http://127.0.0.1:5000//',
+                url:' http://127.0.0.1:5001//showAllWorker',
                 type:'GET',
-                data:{reshowworker:request},
+                //data:{reshowworker:request},
 
                 success:function(result){
-                    for(var number=1;number<result['num']+1;number++){
-                        document.getElementById("ID"+number).innerText =result['ID'+number]
-                        document.getElementById("name"+number).innerText =result['name'+number]
-                        document.getElementById("gender"+number).innerText =result['gender'+number]
-                        document.getElementById("tel"+number).innerText =result['tel'+number]
-                        document.getElementById("type"+number).innerText =result['type'+number]
-                        document.getElementById("Valid"+number).innerText =result['Valid'+number]
+                    for(var num=0;num < result[0].num;num++){
+                        var number = num + 1
+                        document.getElementById("ID"+number).innerText =result[num].ID
+                        document.getElementById("name"+number).innerText =result[num].name
+                        document.getElementById("gender"+number).innerText =result[num].gender
+                        document.getElementById("tel"+number).innerText =result[num].tel
+                        document.getElementById("type"+number).innerText =result[num].type
+                        document.getElementById("Valid"+number).innerText =result[num].valid
                     }
                 }
             })
